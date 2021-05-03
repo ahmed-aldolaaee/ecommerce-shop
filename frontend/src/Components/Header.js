@@ -1,8 +1,8 @@
 const Header = () => {
   return (
     <header>
-      <div className="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid mb-3 p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
           <div class="container">
             <a class="navbar-brand" href="/">
               Navbar

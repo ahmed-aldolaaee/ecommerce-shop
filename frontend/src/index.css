@@ -19,3 +19,12 @@ footer {
   width: 100%;
   text-align: center;
 }
+
+nav {
+  height: 75px;
+}
+
+.cards {
+  text-decoration: none;
+  color: black;
+}
