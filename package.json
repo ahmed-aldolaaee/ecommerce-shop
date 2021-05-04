@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-shop",
+  "version": "1.0.0",
+  "description": "MERN stack ecommerce project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-aldolaaee/ecommerce-shop.git"
+  },
+  "author": "ahmed-aldolaaee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmed-aldolaaee/ecommerce-shop/issues"
+  },
+  "homepage": "https://github.com/ahmed-aldolaaee/ecommerce-shop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
