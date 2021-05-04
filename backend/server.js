@@ -4,7 +4,7 @@ const products = require('./data/products');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('heeellloooo');
+    res.send('The API is running ...');
 });
 
 app.get('/api/products', (req, res) => {

@@ -1,8 +1,18 @@
+import {useState, useEffect} from 'react';
 import Rating from "../Components/Rating";
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const HomeScreen = ({ product }) => {
-  const ProMap = product.map((product, ind) => {
+const [products, setProducts] = useState([]);
+
+useEffect(() => {
+  axios.get('/api/products')
+  .then(res => res.data)
+  .then(data => setProducts(data));
+}, []);
+
+  const ProMap = products.map((product, ind) => {
     return (
       <div className="col-3 mb-3">
         <Link to={`/product/${product._id}`} className="cards">

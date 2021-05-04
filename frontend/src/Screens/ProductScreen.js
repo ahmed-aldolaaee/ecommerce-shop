@@ -1,9 +1,17 @@
-import products from "../products";
 import Rating from '../Components/Rating';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 const ProductScreen = ({ match }) => {
-  const product = products.find((item) => item._id === match.params.id);
-    console.log(product.image);
+
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    axios.get(`/api/products/${match.params.id}`)
+    .then(res => res.data)
+    .then(data => setProduct(data));
+  }, []);
+
   return (
     <div className="container">
       <div className="row">

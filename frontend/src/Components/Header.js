@@ -13,12 +13,12 @@ const Header = () => {
               <ul className="navbar-nav">
                 <li className="nav-item">
                   <Link className="nav-link" to="/cart">
-                    <i class="fas fa-shopping-cart"></i> Cart
+                    <i className="fas fa-shopping-cart"></i> Cart
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/signin">
-                    <i class="fas fa-sign-in-alt"></i> Sign In
+                    <i className="fas fa-sign-in-alt"></i> Sign In
                   </Link>
                 </li>
               </ul>
