@@ -1,16 +1,17 @@
-import {useState, useEffect} from 'react';
+import { useEffect } from "react";
 import Rating from "../Components/Rating";
 import { Link } from "react-router-dom";
-import axios from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { listProducts } from "../actions/productActions";
 
-const HomeScreen = ({ product }) => {
-const [products, setProducts] = useState([]);
+const HomeScreen = () => {
+  const dispatch = useDispatch();
+  const productList = useSelector(state => state.productList);
+  useEffect(() => {
+    dispatch(listProducts());
+  }, [dispatch]);
 
-useEffect(() => {
-  axios.get('/api/products')
-  .then(res => res.data)
-  .then(data => setProducts(data));
-}, []);
+  const products = productList.products;
 
   const ProMap = products.map((product, ind) => {
     return (
@@ -32,6 +33,7 @@ useEffect(() => {
   return (
     <div className="container-fluid bg-light">
       <div className="container">
+        <h1 className="display-4">Latest Products</h1>
         <div className="row">{ProMap}</div>
       </div>
     </div>
